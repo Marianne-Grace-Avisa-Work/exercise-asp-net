@@ -55,7 +55,7 @@ namespace RegisterLoginLogout.Controllers
         {
             using (UserAccountDBContext db = new UserAccountDBContext())
             {
-                var User = db.userAccount.Single(userAccount => userAccount.EmailAddress == user.EmailAddress && userAccount.Password == user.Password);
+                var User = db.userAccount.FirstOrDefault(userAccount => userAccount.EmailAddress == user.EmailAddress && userAccount.Password == user.Password);
                 if(User != null)
                 {
                     Session["UserID"] = User.UserID.ToString();

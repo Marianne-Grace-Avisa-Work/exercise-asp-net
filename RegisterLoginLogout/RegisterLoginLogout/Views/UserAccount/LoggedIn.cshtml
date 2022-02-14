@@ -5,7 +5,10 @@
 
 @if (Session["UserID"] != null)
 {
-    <h4>Welcome @Session["FirstName"]!</h4>
+    <div class="jumbotron">
+        <h1>Welcome, @Session["FirstName"]!</h1>
+    </div>
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
